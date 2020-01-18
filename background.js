@@ -7,7 +7,7 @@ chrome.runtime.onInstalled.addListener(function() {
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
     chrome.declarativeContent.onPageChanged.addRules([{
       conditions: [new chrome.declarativeContent.PageStateMatcher({
-        pageUrl: {hostEquals: 'developer.chrome.com'},
+        pageUrl: { hostEquals: 'http://127.0.0.1:8080/' },
       })
       ],
           actions: [new chrome.declarativeContent.ShowPageAction()]
